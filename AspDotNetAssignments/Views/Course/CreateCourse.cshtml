@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "CreateCourse";
+}
+
+<h1>CreateCourse</h1>
+<form asp-action="Create Course">
+    <table>
+        <tr>
+            <th>Enter your name</th>
+            <td>
+                @Html.TextBox("name")
+            </td>
+        </tr>
+        <tr>
+            <th>Select Gender</th>
+            <td>
+                @Html.RadioButton("gender","Male") Male
+                @Html.RadioButton("gender","Female") Female
+            </td>
+        </tr>
+        <tr>
+            <th>Course Interested?</th>
+            <td>
+                @Html.RadioButton("course","C#") C#
+                @Html.RadioButton("course","Java") Java
+                @Html.RadioButton("course","Angular") Angular
+                @Html.RadioButton("course","React") React
+                @Html.RadioButton("course","Software Testing") Software Testing
+            </td>
+        </tr>
+        <tr>
+            <th>Would You like to know more about Course ?</th>
+            <td>
+                @Html.DropDownList("options")
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                <input type="submit" value="Add" />
+            </td>
+        </tr>
+    </table>
+
+</form>
